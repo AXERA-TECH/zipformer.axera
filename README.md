@@ -38,7 +38,8 @@ git clone https://github.com/AXERA-TECH/zipformer.axera.git
    5、export PYTHONPATH=$PWD:$PYTHONPATH
 
 # 模型下载
-
+链接: https://github.com/AXERA-TECH/zipformer.axera/releases/download/v1.0/epoch-99.pt
+下载后将模型放到 k2fsa-zipformer-bilingual-zh-en-t 文件夹下
 ```
 
 ### 2. 模型转换
@@ -74,3 +75,4 @@ pulsar2 build --config zipformer_joiner.json
 ## 技术支持
 - Github issues
 - QQ 群: 139953715
+
