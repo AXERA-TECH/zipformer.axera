@@ -54,8 +54,6 @@ chunk_len 参考值为(32,64,96),根据需要调整
 #### 量化数据生成
 ```
 sh save_inpus_data.sh
-
-chunk_lenx模型时一致
 ```
 
 #### onnx转换成axmodel
@@ -76,5 +74,6 @@ pulsar2 build --config config/zipformer_joiner.json
 ## 技术支持
 - Github issues
 - QQ 群: 139953715
+
 
 
