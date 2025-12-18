@@ -43,30 +43,31 @@ git clone https://github.com/AXERA-TECH/zipformer.axera.git
 ```
 
 ### 2. 模型转换
-#### 导出 onnx 模型
+#### 导出 onnx 模型  
 ```bash
 sh export-for-onnx.sh
 
 chunk_len 参考值为(32,64,96),根据需要调整
 ```
+转换好的onnx: https://github.com/AXERA-TECH/zipformer.axera/releases/tag/v1.0
 
 #### 量化数据生成
 ```
 sh save_inpus_data.sh
 
-chunk_len 同导出onnx模型时一致
+chunk_lenx模型时一致
 ```
 
 #### onnx转换成axmodel
 ```
 decoder转换：
-pulsar2 build --config zipformer_decoder.json
+pulsar2 build --config config/zipformer_decoder.json
 
 encoder转换：
-pulsar2 build --config zipformer_encoder.json
+pulsar2 build --config config/zipformer_encoder.json
 
 joiner转换：
-pulsar2 build --config zipformer_joiner.json
+pulsar2 build --config config/zipformer_joiner.json
 ```
 
 ## 参考
@@ -75,4 +76,5 @@ pulsar2 build --config zipformer_joiner.json
 ## 技术支持
 - Github issues
 - QQ 群: 139953715
+
 
