@@ -1,0 +1,264 @@
+{
+  "model_type": "ONNX",
+  "npu_mode": "NPU3",
+  "input": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/encoder-epoch-99-avg-1.sim.onnx",
+  "output_name":"encoder.axmodel",
+  "output_dir":"./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/output_encoder",
+  "target_hardware": "AX650",
+  "onnx_opt": {
+  "disable_onnx_optimization": false,
+  "enable_onnxsim": true,
+  },
+  "quant": {
+    "input_configs": [
+      {
+        "tensor_name": "x",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/x.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_avg_0",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_avg_0.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_avg_1",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_avg_1.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_avg_2",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_avg_2.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_avg_3",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_avg_3.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_avg_4",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_avg_4.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv1_0",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv1_0.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv1_1",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv1_1.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv1_2",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv1_2.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv1_3",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv1_3.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv1_4",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv1_4.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv2_0",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv2_0.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv2_1",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv2_1.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv2_2",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv2_2.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv2_3",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv2_3.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_conv2_4",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_conv2_4.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_key_0",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_key_0.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_key_1",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_key_1.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_key_2",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_key_2.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_key_3",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_key_3.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_key_4",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_key_4.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_len_0",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_len_0.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_len_1",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_len_1.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_len_2",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_len_2.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_len_3",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_len_3.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_len_4",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_len_4.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val_0",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val_0.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val_1",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val_1.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val_2",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val_2.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val_3",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val_3.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val_4",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val_4.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val2_0",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val2_0.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val2_1",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val2_1.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val2_2",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val2_2.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val2_3",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val2_3.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      },
+      {
+        "tensor_name": "cached_val2_4",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/cached_val2_4.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      }
+    ],
+    "layer_configs": [
+      {
+        "start_tensor_names": [
+          "DEFAULT"
+        ],
+        "end_tensor_names": [ 
+          "DEFAULT"
+        ],
+        "data_type": "U16"
+      },
+      {
+        // set quantize precision by operator type. type: string. required: must choose between `layer_name` and `op_type` and `layer_names` and `op_types`. default: .
+        "op_type": "Pow",
+        // quantize data type. type: enum. required: false. default: U8. option: U8, S8, U16, S16, FP32.
+        "data_type": "U8"
+      }
+    ],
+    "calibration_method": "MinMax", 
+    "enable_smooth_quant": true,
+    "conv_bias_data_type": "FP32",
+    "disable_auto_refine_scale": true,
+    "precision_analysis": true,
+    "precision_analysis_method": "EndToEnd",
+    "transformer_opt_level": 0
+  },
+  "input_processors": [
+    {
+      "tensor_name": "DEFAULT"
+    }
+  ],
+  "compiler": {
+    "check": 0
+  }
+}

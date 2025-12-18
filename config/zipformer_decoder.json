@@ -1,0 +1,48 @@
+{
+  "model_type": "ONNX",
+  "npu_mode": "NPU3",
+  "input": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/decoder-epoch-99-avg-1.sim.onnx",
+  "output_name":"decoder.axmodel",
+  "output_dir":"./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/output_decoder",
+  "target_hardware": "AX650",
+  "onnx_opt": {
+  "disable_onnx_optimization": false,
+  "enable_onnxsim": true,
+  },
+  "quant": {
+    "input_configs": [
+      {
+        "tensor_name": "y",
+        "calibration_dataset": "./k2fsa-zipformer-bilingual-zh-en-t/exp_onnx_96/datasets/y.zip",
+        "calibration_size": -1,
+        "calibration_format": "Numpy"
+      }
+    ],
+    "layer_configs": [
+      {
+        "start_tensor_names": [
+          "DEFAULT"
+        ],
+        "end_tensor_names": [ 
+          "DEFAULT"
+        ],
+        "data_type": "U16"
+      }
+    ],
+    "calibration_method": "MinMax",
+    "enable_smooth_quant": true,
+    "conv_bias_data_type": "FP32",
+    "disable_auto_refine_scale": true,
+    "precision_analysis": true,
+    "precision_analysis_method": "EndToEnd", 
+    "transformer_opt_level": 0
+  },
+  "input_processors": [
+    {
+      "tensor_name": "DEFAULT"
+    }
+  ],
+  "compiler": {
+    "check": 0
+  }
+}
