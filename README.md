@@ -12,10 +12,11 @@
 ## 快速开始  
 
 ### 1. 环境配置  
+已验证环境：python3.10
 ```bash
-# 创建虚拟环境并激活  
-conda create -n zipformer python=3.10
-conda activate zipformer
+# 创建虚拟环境并激活
+python3.10 -m venv zipformer
+source zipformer/bin/activate
 
 # 工程下载  
 git clone https://github.com/AXERA-TECH/zipformer.axera.git
@@ -74,6 +75,7 @@ pulsar2 build --config config/zipformer_joiner.json
 ## 技术支持
 - Github issues
 - QQ 群: 139953715
+
 
 
 
